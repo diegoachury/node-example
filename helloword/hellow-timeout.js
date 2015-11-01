@@ -7,7 +7,7 @@ http.createServer(function( request, response){
 	setTimeout(function(){
 		response.write("Dog is done");
 		response.end();
-	}, 5000);
+	}, 15000);
 
 }).listen(8080);
 
