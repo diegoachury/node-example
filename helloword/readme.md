@@ -1,0 +1,1 @@
+esta info quiero copiarla a readme_copy.md
