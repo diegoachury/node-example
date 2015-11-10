@@ -20,13 +20,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
+// esto no renderiza todo lo que existe en la carpeta public view 
+app.use(express.static(__dirname + '/public'));
+
 //configurando api
 var api = require('./app/routes/api')(app, express);
 app.use('/api', api);
 
 //rutas
 app.get('*', function(req, res){
-	res.sendFile(__dirname + '/public/view/index.html');
+	res.sendFile(__dirname + '/public/app/views/index.html');
 })
 
 
